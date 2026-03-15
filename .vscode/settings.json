@@ -1,7 +1,105 @@
 {
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.codeActionsOnSave": {
-    "source.fixAll": "explicit",
-    "source.organizeImports": "explicit",
-    "source.sortMembers": "explicit"
-  }
+    "source.organizeImports": "explicit"
+  },
+  "prettier.singleQuote": false,
+  "prettier.bracketSpacing": false,
+  "prettier.printWidth": 120,
+  "prettier.trailingComma": "all",
+  "prettier.arrowParens": "avoid",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "explorer.confirmDelete": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "sonarlint.rules": {
+    "typescript:S138": {
+      "level": "off"
+    },
+    "typescript:S4622": {
+      "level": "on"
+    },
+    "typescript:S6440": {
+      "level": "off"
+    },
+    "typescript:S1117": {
+      "level": "on"
+    },
+    "typescript:S3512": {
+      "level": "on"
+    },
+    "typescript:S3776": {
+      "level": "on"
+    },
+    "typescript:S1488": {
+      "level": "on"
+    },
+    "typescript:S7735": {
+      "level": "on"
+    }
+  },
+
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.autofetch": true,
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "editor.cursorBlinking": "expand",
+  "editor.linkedEditing": true,
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "terminal.integrated.env.osx": {},
+  "terminal.integrated.env.windows": {},
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "package.json": "Gemfile, Gemfile.lock, .ruby-version, *config.js, *.json,*.key, *.mjs, .env*, jest*, *d.ts, next.config.js,react-device-detect.js, .browserslist*, force-gc.js,*.dockerignore, dockerfile,smartlook-scr.js, .gitignore, *.yml, *.xml, *.conf, *.sh, .circleci*, .commitlint*, .cz-config.js, .czrc, .dlint.json, .dprint.json*, .editorconfig, .eslint*, .firebase*, .flowconfig, .github*, .gitlab*, .gitmojirc.json, .gitpod*, .huskyrc*, .jslint*, .knip.*, .lintstagedrc*, .markdownlint*, .node-version, .nodemon*, .npm*, .nvmrc, .pm2*, .pnp.*, .pnpm*, .prettier*, .release-please*.json, .releaserc*, .sentry*, .simple-git-hooks*, .stackblitz*, .styleci*, .stylelint*, .tazerc*, .textlint*, .tool-versions, .travis*, .versionrc*, .vscode*, .watchman*, .xo-config*, .yamllint*, .yarnrc*, Procfile, apollo.config.*, appveyor*, azure-pipelines*, biome.json, bower.json, build.config.*, bun.lockb, commitlint*, crowdin*, dangerfile*, dlint.json, dprint.json*, electron-builder.*, eslint*, firebase.json, grunt*, gulp*, jenkins*, knip.*, lerna*, lint-staged*, nest-cli.*, netlify*, nodemon*, npm-shrinkwrap.json, nx.*, package-lock.json, package.nls*.json, phpcs.xml, pm2.*, pnpm*, prettier*, pullapprove*, pyrightconfig.json, release-please*.json, release-tasks.sh, release.config.*, renovate*, rollup.config.*, rspack*, simple-git-hooks*, sonar-project.properties, stylelint*, tslint*, tsup.config.*, turbo*, typedoc*, unlighthouse*, vercel*, vetur.config.*, webpack*, workspace.json, xo.config.*, yarn*"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "editor.accessibilitySupport": "off",
+  "terminal.integrated.defaultProfile.linux": "bash",
+  "editor.minimap.sectionHeaderFontSize": 10,
+  "debug.console.fontSize": 12,
+  "scm.inputFontSize": 12,
+  "terminal.integrated.fontSize": 12,
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "terminal.integrated.env.linux": {},
+  "workbench.iconTheme": "material-icon-theme",
+  "deepseek.lang": "en",
+  "editor.minimap.renderCharacters": false,
+  "sonarlint.automaticAnalysis": true,
+  "sonarlint.output.showVerboseLogs": true,
+  "sonarlint.disableTelemetry": true,
+  "sonarlint.focusOnNewCode": false,
+  "sonarlint.connectedMode.connections.sonarcloud": [],
+  "sonarlint.earlyAccess.showRegionSelection": true,
+  "terminal.integrated.profiles.windows": {
+    "PowerShell": {
+      "source": "PowerShell",
+      "icon": "terminal-powershell"
+    },
+    "Command Prompt": {
+      "path": "C:\\Windows\\System32\\cmd.exe",
+      "args": [],
+      "icon": {
+        "id": "terminal-cmd"
+      }
+    },
+    "Git Bash": {
+      "path": "C:\\Program Files\\Git\\bin\\bash.exe",
+      "args": ["--login", "-i"]
+    }
+  },
+  "gitlens.ai.model": "vscode",
+  "gitlens.ai.vscode.model": "copilot:gpt-4.1"
 }

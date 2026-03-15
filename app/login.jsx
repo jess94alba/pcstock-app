@@ -1,13 +1,13 @@
-import { useRouter } from "expo-router";
-import { useState } from "react";
-import { Alert, Text, TextInput, TouchableOpacity, View } from "react-native";
-import { useAuth } from "../context/AuthContext";
+import {useRouter} from "expo-router";
+import {useState} from "react";
+import {Alert, Text, TextInput, TouchableOpacity, View} from "react-native";
+import {useAuth} from "../context/AuthContext";
 import globalStyles from "../styles/globalStyles";
 
 export default function LoginScreen() {
   const [correo, setCorreo] = useState("");
   const [password, setPassword] = useState("");
-  const { login } = useAuth();
+  const {login} = useAuth();
   const router = useRouter();
 
   const handleLogin = async () => {
@@ -42,26 +42,44 @@ export default function LoginScreen() {
 
   return (
     <View style={globalStyles.containerCenter}>
-      <Text style={globalStyles.title}>Iniciar Sesión</Text>
+      <View style={globalStyles.content}>
+        <Text style={globalStyles.title}>Bienvenido a PCStock</Text>
 
-      <TextInput
-        style={globalStyles.input}
-        placeholder="Correo electrónico"
-        value={correo}
-        onChangeText={setCorreo}
-      />
+        <View style={globalStyles.navBubble}>
+          <TouchableOpacity onPress={() => router.push("/")}>
+            <Text style={globalStyles.navLink}>Inicio</Text>
+          </TouchableOpacity>
 
-      <TextInput
-        style={globalStyles.input}
-        placeholder="Contraseña"
-        secureTextEntry
-        value={password}
-        onChangeText={setPassword}
-      />
+          <TouchableOpacity onPress={() => router.push("/login")}>
+            <Text style={globalStyles.navLink}>Login</Text>
+          </TouchableOpacity>
 
-      <TouchableOpacity style={globalStyles.button} onPress={handleLogin}>
-        <Text style={globalStyles.buttonText}>Ingresar</Text>
-      </TouchableOpacity>
+          <TouchableOpacity onPress={() => router.push("/registerClient")}>
+            <Text style={globalStyles.navLink}>Registrar</Text>
+          </TouchableOpacity>
+        </View>
+
+        <Text style={globalStyles.title}>Iniciar Sesión</Text>
+
+        <TextInput
+          style={globalStyles.input}
+          placeholder="Correo electrónico"
+          value={correo}
+          onChangeText={setCorreo}
+        />
+
+        <TextInput
+          style={globalStyles.input}
+          placeholder="Contraseña"
+          secureTextEntry
+          value={password}
+          onChangeText={setPassword}
+        />
+
+        <TouchableOpacity style={globalStyles.button} onPress={handleLogin}>
+          <Text style={globalStyles.buttonText}>Ingresar</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }
